@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 112, 186, 0.15), transparent 60%),
+                radial-gradient(1000px 500px at 100% 10%, rgba(255, 196, 57, 0.08), transparent 60%),
+                #05070f;
+  }
+}
+
+@layer components {
+  .card { @apply rounded-2xl bg-slate-900/60 ring-1 ring-white/10 backdrop-blur shadow-xl; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-paypal-light hover:bg-paypal-blue text-white; }
+  .btn-gold { @apply btn bg-paypal-gold hover:brightness-110 text-ink; }
+  .btn-ghost { @apply btn ring-1 ring-white/15 hover:bg-white/5 text-slate-200; }
+  .input { @apply w-full rounded-xl bg-slate-950/70 ring-1 ring-white/10 px-4 py-2.5 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-paypal-light; }
+  .label { @apply block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5; }
+  .pill { @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold; }
+}
